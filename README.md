@@ -31,8 +31,7 @@ import 'react-chatbot-kit/build/main.css'
 import config from './config';
 
 2.Set up the chatbot in my component:
-function App() {
-  
+function App() { 
   return (
     <div className="App">
       <header className="App-header">
@@ -42,8 +41,6 @@ function App() {
           messageParser={MessageParser}
           headerText='LSEG chatbot'
           placeholderText='Please pick an option'
-       
-
         />
       </header>
     </div>
@@ -59,7 +56,6 @@ To customize the chatbot, I modified the configuration and added my own message 
 const botName = 'LSEG chatbot';
 const message = "Hello! Welcome to LSEG. I'm here to help you."
 const config = {
-
   botName: botName,
   initialMessages: [
     createChatBotMessage(`${message}`, {
@@ -67,7 +63,6 @@ const config = {
       delay: 500,
       widget: 'menuSelected',
     }),
-
     
   ],
 }
