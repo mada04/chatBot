@@ -2,8 +2,12 @@
 This app for chatbot build with React using the `react-chatbot-kit`.
 
 ## Table of contents.
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Customization](#customization)
 
 
+**#Installation**
 
 To get started with this project,follow these steps:
 1.Create app:
@@ -18,7 +22,7 @@ npm start
 4.Open you browser and navigate to http://localhost:3000
 
 
-Usage
+**Usage**
 Here's how to use the chatbot in my React application:
 
 1.Import the Chatbot component:
@@ -48,10 +52,10 @@ function App() {
 
 export default App;
 
-Customization
+**Customization**
 To customize the chatbot, I modified the configuration and added my own message parser and action provider.
 
-1.Configuration Example:
+**1.Configuration Example:**
 const botName = 'LSEG chatbot';
 const message = "Hello! Welcome to LSEG. I'm here to help you."
 const config = {
@@ -67,20 +71,20 @@ const config = {
     
   ],
 }
-2.Action Provider
+**2.Action Provider**
 
 Create a file named ActionProvider.js
 
-3.Message Parser
+**3.Message Parser**
 
 Create a file named MessageParser.js
 
-4.CusttomMessage
+**4.CusttomMessage**
   Create a file named CusttomMessage.js where the data from the first table is stored.
 
-5.Stock
+**5.Stock**
  Create a file named Stock.js where the data from the second table is stored.
 
- 6.FinalView
+** 6.FinalView**
   Create a file named FinalView.js , data from the third table .
  
