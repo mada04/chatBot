@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+#React chatbot 
+This app for chatbot build with React using the `react-chatbot-kit`.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+To get started with this project,follow these steps:
+1.Create app:
+npx create-react-app my-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2.Open file
+cd my-app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3.Start the development server:
+npm start
 
-### `npm test`
+4.Open you browser and navigate to http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Usage
+Here's how to use the chatbot in my React application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.Import the Chatbot component:
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+import config from './config';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.Set up the chatbot in my component:
+function App() {
+  
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Chatbot
+          config={config}
+          actionProvider={ActionProvider}
+          messageParser={MessageParser}
+          headerText='LSEG chatbot'
+          placeholderText='Please pick an option'
+       
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        />
+      </header>
+    </div>
+  );
+}
 
-### `npm run eject`
+export default App;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Customization
+To customize the chatbot, I modified the configuration and added my own message parser and action provider.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.Configuration Example:
+const botName = 'LSEG chatbot';
+const message = "Hello! Welcome to LSEG. I'm here to help you."
+const config = {
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  botName: botName,
+  initialMessages: [
+    createChatBotMessage(`${message}`, {
+      withAvatar: true,
+      delay: 500,
+      widget: 'menuSelected',
+    }),
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    
+  ],
+}
+2.Action Provider
 
-## Learn More
+Create a file named ActionProvider.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.Message Parser
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a file named MessageParser.js
 
-### Code Splitting
+4.CusttomMessage
+  Create a file named CusttomMessage.js where the data from the first table is stored.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5.Stock
+ Create a file named Stock.js where the data from the second table is stored.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 6.FinalView
+  Create a file named FinalView.js , data from the third table .
+ 
